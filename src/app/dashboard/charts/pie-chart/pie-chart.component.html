@@ -1,1 +1,7 @@
-<p>pie-chart works!</p>
+<dx-pie-chart 
+    [dataSource]="data" 
+    title="Sales by Region"
+    [diameter]=0.8>
+    <dxi-series argumentField="region" valueField="sales">
+    </dxi-series>
+</dx-pie-chart>

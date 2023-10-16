@@ -1,1 +1,7 @@
-<p>dashboard works!</p>
+<app-controls (loadData)="onLoadData($event)"></app-controls>
+
+<!-- Graph Component -->
+<app-graph [data]="graphData"></app-graph>
+
+<!-- Pie Chart Component -->
+<app-pie-chart [data]="pieChartData"></app-pie-chart>
