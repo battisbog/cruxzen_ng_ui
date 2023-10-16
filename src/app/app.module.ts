@@ -9,7 +9,7 @@ import { PieChartComponent } from './dashboard/charts/pie-chart/pie-chart.compon
 
 import { DxChartModule } from 'devextreme-angular';
 import { DxPieChartModule } from 'devextreme-angular';
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './app.component';
 
 
 
