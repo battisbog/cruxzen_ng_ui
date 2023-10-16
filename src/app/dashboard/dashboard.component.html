@@ -1,7 +1,23 @@
-<app-controls (loadData)="onLoadData($event)"></app-controls>
+<div class="dashboard-container">
 
-<!-- Graph Component -->
-<app-graph [data]="graphData"></app-graph>
+    <!-- Left side: Controls Component -->
+    <div class="controls-container">
+        <app-controls (loadData)="onLoadData($event)"></app-controls>
+    </div>
 
-<!-- Pie Chart Component -->
-<app-pie-chart [data]="pieChartData"></app-pie-chart>
+    <!-- Right side: Charts -->
+    <div class="charts-container">
+        
+        <!-- Graph Component -->
+        <div class="chart-item">
+            <app-graph [data]="graphData"></app-graph>
+        </div>
+        
+        <!-- Pie Chart Component -->
+        <div class="chart-item">
+            <app-pie-chart [data]="pieChartData"></app-pie-chart>
+        </div>
+
+    </div>
+    
+</div>
