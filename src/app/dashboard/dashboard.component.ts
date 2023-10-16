@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
-    graphData: any[] = [];
-    pieChartData: any[] = [];
+  graphData: any[] = [];
+  pieChartData: any[] = [];
+  isGraphVisible = true;
+  isPieChartVisible = true;
+  
 
     constructor() { }
 
@@ -30,4 +33,24 @@ export class DashboardComponent {
             ];
         }
     }
+
+    onClearData(event: boolean) {
+      if (event) {
+        this.graphData = [];
+        this.pieChartData = [];
+      }
+  }
+  
+  onToggleGraphVisibility(event: boolean) {
+      if (event) {
+        this.isGraphVisible = !this.isGraphVisible;
+      }
+  }
+  
+  onTogglePieChartVisibility(event: boolean) {
+      if (event) {
+        this.isPieChartVisible = !this.isPieChartVisible;
+      }
+  }
+  
 }

@@ -2,8 +2,13 @@
 
     <!-- Left side: Controls Component -->
     <div class="controls-container">
-        <app-controls (loadData)="onLoadData($event)"></app-controls>
-    </div>
+        <app-controls 
+        (loadDataEvent)="onLoadData($event)"
+        (clearDataEvent)="onClearData($event)"
+        (toggleGraphVisibilityEvent)="onToggleGraphVisibility($event)"
+        (togglePieChartVisibilityEvent)="onTogglePieChartVisibility($event)">
+    </app-controls>
+        </div>
 
     <!-- Right side: Charts -->
     <div class="charts-container">
