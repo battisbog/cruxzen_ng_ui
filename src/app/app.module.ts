@@ -1,28 +1,24 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { XyzComponent } from './xyz/xyz.component';
-
-import { DxChartModule } from 'devextreme-angular';
-import { DxPieChartModule} from 'devextreme-angular';
-import { DxoLabelModule } from 'devextreme-angular/ui/nested';
-
+// Import your components
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ControlsComponent } from './dashboard/controls/controls.component';
+import { GraphComponent } from './dashboard/charts//graph/graph.component';
+import { PieChartComponent } from './dashboard/charts/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    XyzComponent
+    DashboardComponent,
+    ControlsComponent,
+    GraphComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    DxChartModule,
-    DxPieChartModule,
-    DxoLabelModule
+    // ... other module imports
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [DashboardComponent] // set DashboardComponent as the root component
 })
 export class AppModule { }
