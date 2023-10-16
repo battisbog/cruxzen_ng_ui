@@ -1,0 +1,26 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<h1>App Component</h1>
+<button (click)="showCharts()">Show Charts</button>
+
+<!-- Bar Chart -->
+<dx-chart *ngIf="isChartVisible" [dataSource]="chartData">
+  <dxi-series valueField="val" argumentField="month"></dxi-series>
+</dx-chart>
+
+<!-- Pie Chart -->
+<dx-pie-chart *ngIf="isPieChartVisible"
+              [dataSource]="pieChartData"
+              title="Sales by Region"
+              [diameter]=0.8
+              valueField="sales"
+              argumentField="region">
+</dx-pie-chart>
+
