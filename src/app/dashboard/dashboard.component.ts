@@ -18,12 +18,11 @@ export class DashboardComponent {
     onLoadData(event: boolean) {
         if (event) {
           this.graphData = [
-            { name: 'Jan', value: 120 },
-            { name: 'Feb', value: 150 },
-            { name: 'Mar', value: 80 },
-            { name: 'Apr', value: 90 },
-            { name: 'May', value: 60 }
-          ];
+            { month: "January", value: 10 },
+            { month: "February", value: 20 },
+            { month: "March", value: 30 },
+            { month: "April", value: 40 }
+        ];    
       
 
             this.pieChartData = [

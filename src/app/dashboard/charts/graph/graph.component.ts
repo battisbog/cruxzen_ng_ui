@@ -1,17 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
     selector: 'app-graph',
     templateUrl: './graph.component.html',
     styleUrls: ['./graph.component.css']
 })
-export class GraphComponent implements OnInit {
+export class GraphComponent implements OnChanges {
 
     @Input() data: any[] = [];
 
-    constructor() { }
-
-    ngOnInit(): void {
+    ngOnChanges(): void {
+        console.log("Data changed:", this.data);
     }
-
 }
