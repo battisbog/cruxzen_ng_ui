@@ -1,0 +1,20 @@
+.controls-panel {
+    display: flex;
+    flex-direction: column; /* This ensures that buttons are stacked vertically */
+    gap: 10px; /* This provides spacing between the buttons */
+}
+
+.controls-panel button {
+    padding: 15px 30px; /* Increase padding to make buttons bigger */
+    font-size: 16px; /* Increase font-size if necessary */
+    cursor: pointer; /* Change cursor to pointer on hover over buttons */
+    border: none; /* Removes default border */
+    background-color: #007bff; /* Change to your preferred color */
+    color: #fff; /* Change text color to white */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Adds a smooth transition effect */
+}
+
+.controls-panel button:hover {
+    background-color: #0056b3; /* Darken the button color a bit on hover */
+}

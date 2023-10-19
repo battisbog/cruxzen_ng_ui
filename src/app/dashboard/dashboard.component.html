@@ -1,0 +1,28 @@
+<div class="dashboard-container">
+
+    <!-- Left side: Controls Component -->
+    <div class="controls-container">
+        <app-controls 
+        (loadDataEvent)="onLoadData($event)"
+        (clearDataEvent)="onClearData($event)"
+        (toggleGraphVisibilityEvent)="onToggleGraphVisibility($event)"
+        (togglePieChartVisibilityEvent)="onTogglePieChartVisibility($event)">
+    </app-controls>
+        </div>
+
+    <!-- Right side: Charts -->
+    <div class="charts-container">
+        
+        <!-- Graph Component -->
+        <div class="chart-item">
+            <app-graph [data]="graphData"></app-graph>
+        </div>
+        
+        <!-- Pie Chart Component -->
+        <div class="chart-item">
+            <app-pie-chart [data]="pieChartData"></app-pie-chart>
+        </div>
+
+    </div>
+    
+</div>
